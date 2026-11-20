@@ -69,11 +69,11 @@ nav a.nav-link:hover{color:var(--accent)}
   max-width:1080px;margin:0 auto;padding:72px 24px 56px;
   display:flex;align-items:center;gap:40px;flex-wrap:wrap;
 }
-.monogram{
-  flex:0 0 auto;width:112px;height:112px;border-radius:50%;
-  background:var(--accent);color:#fff;
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--serif);font-size:40px;font-weight:700;letter-spacing:1px;
+.avatar{
+  flex:0 0 auto;width:148px;height:148px;border-radius:50%;
+  object-fit:cover;
+  border:3px solid var(--accent-soft);
+  background:var(--accent-soft);
 }
 .hero-text h1{font-family:var(--serif);font-size:42px;font-weight:700;line-height:1.2;letter-spacing:.5px}
 .hero-text .name-en{font-size:20px;color:var(--ink-soft);font-weight:500;margin-top:6px}
@@ -161,6 +161,7 @@ footer{border-top:1px solid var(--line);margin-top:20px}
 
 @media(max-width:640px){
   .hero{padding-top:48px}
+  .avatar{width:112px;height:112px}
   .hero-text h1{font-size:32px}
   .hero-text .name-en{font-size:17px}
   nav{display:none}
@@ -171,7 +172,7 @@ footer{border-top:1px solid var(--line);margin-top:20px}
 
 <header>
   <div class="nav-inner">
-    <div class="brand">Ningxia <span>·</span> Nova</div>
+    <div class="brand">Ningxia Wang</div>
     <nav id="nav"></nav>
     <div class="lang-toggle" role="group" aria-label="Language">
       <button data-lang="zh" class="active">中</button>
@@ -181,7 +182,7 @@ footer{border-top:1px solid var(--line);margin-top:20px}
 </header>
 
 <div class="hero">
-  <div class="monogram">NW</div>
+  <img class="avatar" src="avatar2.jpg" alt="WANG, Ningxia (Nova)">
   <div class="hero-text">
     <h1 data-i18n="hero.name"></h1>
     <div class="name-en">WANG, Ningxia (Nova)</div>
@@ -202,8 +203,13 @@ footer{border-top:1px solid var(--line);margin-top:20px}
     <div class="about" id="about-body"></div>
   </section>
 
+  <section id="education">
+    <div class="section-head"><span class="idx">02</span><h2 data-i18n="education.heading"></h2><span class="rule"></span></div>
+    <div id="education-list"></div>
+  </section>
+
   <section id="research">
-    <div class="section-head"><span class="idx">02</span><h2 data-i18n="research.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">03</span><h2 data-i18n="research.heading"></h2><span class="rule"></span></div>
     <p class="research-intro" data-i18n="research.intro"></p>
     <div class="research-map">
       <svg viewBox="0 0 680 520" width="100%" role="img" xmlns="http://www.w3.org/2000/svg" style="font-family:var(--font-sans)">
@@ -255,30 +261,25 @@ footer{border-top:1px solid var(--line);margin-top:20px}
   </section>
 
   <section id="projects">
-    <div class="section-head"><span class="idx">03</span><h2 data-i18n="projects.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">04</span><h2 data-i18n="projects.heading"></h2><span class="rule"></span></div>
     <p style="color:var(--ink-faint);font-size:14px;margin-bottom:18px" data-i18n="projects.intro"></p>
     <div id="projects-list"></div>
   </section>
 
   <section id="publications">
-    <div class="section-head"><span class="idx">04</span><h2 data-i18n="pubs.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">05</span><h2 data-i18n="pubs.heading"></h2><span class="rule"></span></div>
     <p style="color:var(--ink-faint);font-size:14px;margin-bottom:18px" data-i18n="pubs.intro"></p>
     <div id="pubs-list"></div>
   </section>
 
   <section id="teaching">
-    <div class="section-head"><span class="idx">05</span><h2 data-i18n="teaching.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">06</span><h2 data-i18n="teaching.heading"></h2><span class="rule"></span></div>
     <div id="teaching-list"></div>
   </section>
 
   <section id="skills">
-    <div class="section-head"><span class="idx">06</span><h2 data-i18n="skills.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">07</span><h2 data-i18n="skills.heading"></h2><span class="rule"></span></div>
     <div id="skills-list"></div>
-  </section>
-
-  <section id="education">
-    <div class="section-head"><span class="idx">07</span><h2 data-i18n="education.heading"></h2><span class="rule"></span></div>
-    <div id="education-list"></div>
   </section>
 
   <section id="contact">
@@ -306,8 +307,8 @@ const I18N = {
     hero: {
       name: "王宁霞（Nova）",
       title: "研究助理教授",
-      affil: "香港岭南大学 · 中国香港",
-      tagline: "研究兴趣涵盖大语言模型与教育智能体、人机交互、推荐系统（含 serendipity 导向推荐与偏差/公平性）及媒体分析。现任香港岭南大学研究助理教授（兼博士后研究员）。",
+      affil: "香港岭南大学 LEO Dr David P. Chan 数据科学研究所",
+      tagline: "研究兴趣涵盖大语言模型与教育智能体、人机交互、推荐系统（含 serendipity 导向推荐与偏差/公平性）及媒体分析。现任香港岭南大学研究助理教授）。",
       btnResearch: "查看研究方向",
       btnContact: "联系我"
     },
@@ -318,7 +319,7 @@ const I18N = {
     about: {
       heading: "关于我",
       paras: [
-        "王宁霞（Nova），香港岭南大学研究助理教授（兼博士后研究员）。研究兴趣涵盖大语言模型与教育智能体（LLM for Education、AI Agent for Education）、人机交互、推荐系统（含 serendipity 导向推荐、推荐中的偏差与公平性）以及媒体分析。",
+        "王宁霞（Nova），香港岭南大学研究助理教授。研究兴趣涵盖大语言模型与教育智能体（LLM for Education、AI Agent for Education）、人机交互、推荐系统（含 serendipity 导向推荐、推荐中的偏差与公平性）以及媒体分析。",
         "此前在香港浸会大学从事「人工智能 + 媒体」方向博士后研究，并曾担任计算机视觉算法研究员。博士毕业于香港浸会大学，本科毕业于华东师范大学。"
       ]
     },
@@ -329,24 +330,24 @@ const I18N = {
     },
     projects: {
       heading: "项目经历",
-      intro: "代表性科研项目与合作项目。",
+      intro: "代表性科研项目与基金。",
       list: [
-        { title: "[ 项目名称 ]", org: "[ 合作单位 / 资助来源 ]", period: "[ 时间 ]", desc: "[ 项目简介：目标、成果等 ]", tags: ["[标签]"], link: "" }
+        { title: "LLM-Augmented News Terminal: Entity Annotations, Explanation Quality, and Interest-Aware Conversational Recommendation", org: "LU Research Committee · Co-Investigator（PI: Haoran Xie）", period: "2026.01 – 2027.12", desc: "LLM 增强的新闻终端，研究实体标注、解释质量与兴趣感知的对话式推荐。", tags: ["LLM", "新闻分析", "对话式推荐"], link: "https://scholars.ln.edu.hk/en/projects/llm-augmented-news-terminal-entity-annotations-explanation-qualit/" }
       ]
     },
     pubs: {
       heading: "出版物",
       intro: "代表性论文与出版物（APA 格式，按年份倒序）。",
       list: [
-        { tag: "[J1]", title: "A scoping review of generative AI-powered agentic AI in education: Research landscape, agentic capabilities, and insights from the frontier agent paradigm, exemplified by OpenClaw", meta: "Wang, N., Zou, D., Xie, H., &amp; Qin, S. J. (2026). <i>Computers and Education: Artificial Intelligence, 11</i>, 100653.", link: "https://doi.org/10.1016/j.caeai.2026.100653" },
+        { tag: "[J3]", title: "A scoping review of generative AI-powered agentic AI in education: Research landscape, agentic capabilities, and insights from the frontier agent paradigm, exemplified by OpenClaw", meta: "Wang, N., Zou, D., Xie, H., &amp; Qin, S. J. (2026). <i>Computers and Education: Artificial Intelligence, 11</i>, 100653.", link: "https://doi.org/10.1016/j.caeai.2026.100653" },
         { tag: "[J2]", title: "Bread, butter, and bias: How news coverage of egg price and tariffs polarizes U.S. democracy?", meta: "Zhong, B., Zhu, Y., Wang, N., Wang, S., Xu, J., Hu, Y., Lim, H. H., &amp; Feng, G. C. (2026). <i>American Behavioral Scientist</i>. Advance online publication.", link: "" },
-        { tag: "[J3]", title: "How do item features and user characteristics affect users' perceptions of recommendation serendipity? A cross-domain analysis", meta: "Wang, N., &amp; Chen, L. (2023). <i>User Modeling and User-Adapted Interaction, 33</i>(3), 727–765.", link: "https://doi.org/10.1007/s11257-022-09350-x" },
+        { tag: "[J1]", title: "How do item features and user characteristics affect users' perceptions of recommendation serendipity? A cross-domain analysis", meta: "Wang, N., &amp; Chen, L. (2023). <i>User Modeling and User-Adapted Interaction, 33</i>(3), 727–765.", link: "https://doi.org/10.1007/s11257-022-09350-x" },
         { tag: "[T1]", title: "Serendipity-oriented recommendations for improving user satisfaction", meta: "Wang, N. (2023). [Doctoral dissertation, Hong Kong Baptist University].", link: "" },
-        { tag: "[C1]", title: "TUR: Utilizing temporal information to make unexpected e-commerce recommendations", meta: "Ni, Y., Wang, N., Chen, L., Chen, R., &amp; Li, L. (2022). In <i>Web Information Systems Engineering – WISE 2022</i> (pp. 553–563). Springer.", link: "https://doi.org/10.1007/978-3-031-20891-1_39" },
+        { tag: "[C4]", title: "TUR: Utilizing temporal information to make unexpected e-commerce recommendations", meta: "Ni, Y., Wang, N., Chen, L., Chen, R., &amp; Li, L. (2022). In <i>Web Information Systems Engineering – WISE 2022</i> (pp. 553–563). Springer.", link: "https://doi.org/10.1007/978-3-031-20891-1_39" },
         { tag: "[P1]", title: "User validation of recommendation serendipity metrics", meta: "Chen, L., Wang, N., Yang, Y., Yang, K., &amp; Yuan, Q. (2022). <i>Preprint</i>.", link: "https://arxiv.org/abs/1906.11431" },
-        { tag: "[C2]", title: "User bias in beyond-accuracy measurement of recommendation algorithms", meta: "Wang, N., &amp; Chen, L. (2021). In <i>Proceedings of the 15th ACM Conference on Recommender Systems (RecSys '21)</i> (pp. 133–142). ACM.", link: "https://doi.org/10.1145/3460231.3474244" },
-        { tag: "[C3]", title: "The impacts of item features and user characteristics on users' perceived serendipity of recommendations", meta: "Wang, N., Chen, L., &amp; Yang, Y. (2020). In <i>Proceedings of the 28th ACM Conference on User Modeling, Adaptation and Personalization (UMAP '20)</i> (pp. 266–274). ACM.", link: "https://doi.org/10.1145/3340631.3394863" },
-        { tag: "[C4]", title: "How serendipity improves user satisfaction with recommendations? A large-scale user evaluation", meta: "Chen, L., Yang, Y., Wang, N., Yang, K., &amp; Yuan, Q. (2019). In <i>The World Wide Web Conference (WWW '19)</i> (pp. 240–250). ACM.", link: "https://doi.org/10.1145/3308558.3313469" }
+        { tag: "[C3]", title: "User bias in beyond-accuracy measurement of recommendation algorithms", meta: "Wang, N., &amp; Chen, L. (2021). In <i>Proceedings of the 15th ACM Conference on Recommender Systems (RecSys '21)</i> (pp. 133–142). ACM.", link: "https://doi.org/10.1145/3460231.3474244" },
+        { tag: "[C2]", title: "The impacts of item features and user characteristics on users' perceived serendipity of recommendations", meta: "Wang, N., Chen, L., &amp; Yang, Y. (2020). In <i>Proceedings of the 28th ACM Conference on User Modeling, Adaptation and Personalization (UMAP '20)</i> (pp. 266–274). ACM.", link: "https://doi.org/10.1145/3340631.3394863" },
+        { tag: "[C1]", title: "How serendipity improves user satisfaction with recommendations? A large-scale user evaluation", meta: "Chen, L., Yang, Y., Wang, N., Yang, K., &amp; Yuan, Q. (2019). In <i>The World Wide Web Conference (WWW '19)</i> (pp. 240–250). ACM.", link: "https://doi.org/10.1145/3308558.3313469" }
       ]
     },
     teaching: {
@@ -376,23 +377,25 @@ const I18N = {
     contact: {
       heading: "联系方式",
       items: [
-        { ico: "✉", lbl: "邮箱", val: "you@example.com", href: "mailto:you@example.com" },
-        { ico: "⌥", lbl: "GitHub", val: "github.com/your-github-username", href: "https://github.com/your-github-username" },
-        { ico: "in", lbl: "LinkedIn", val: "linkedin.com/in/your-profile", href: "https://www.linkedin.com/in/your-profile" },
-        { ico: "◉", lbl: "单位", val: "岭南大学 · 中国香港", href: "" }
+        { ico: "✉", lbl: "邮箱", val: "novawang@ln.edu.hk", href: "mailto:novawang@ln.edu.hk" },
+        { ico: "☎", lbl: "电话", val: "(852) 2616-7514", href: "tel:+85226167514" },
+        { ico: "G", lbl: "Google Scholar", val: "Google Scholar 主页", href: "https://scholar.google.com/citations?user=dREfVmAAAAAJ" },
+        { ico: "iD", lbl: "ORCID", val: "0000-0003-1782-5554", href: "https://orcid.org/0000-0003-1782-5554" },
+        { ico: "⌥", lbl: "GitHub", val: "github.com/greenblue96", href: "https://github.com/greenblue96" },
+        { ico: "◉", lbl: "单位", val: "岭南大学LEO Dr David P. Chan数据科学研究所", href: "" }
       ]
     },
     footer: {
-      copy: "© 2026 WANG, Ningxia (Nova). 保留所有权利。",
-      built: "简约学术主页 · 中英双语"
+      copy: "© 2026 WANG, Ningxia. 保留所有权利。",
+      built: "网站由 HTML + CSS + JS 构建。"
     }
   },
 
   en: {
     hero: {
-      name: "Ningxia (Nova) Wang",
+      name: "WANG, Ningxia (Nova)",
       title: "Research Assistant Professor",
-      affil: "Lingnan University · Hong Kong, China",
+      affil: "LEO Dr David P. Chan Institute of Data Science, School of Data Science, Lingnan University, Hong Kong, China",
       tagline: "Research interests span large language models and AI agents for education, human–computer interaction, recommender systems (serendipity-oriented recommendation, bias and fairness), and media analysis.",
       btnResearch: "Research Interests",
       btnContact: "Contact Me"
@@ -404,8 +407,8 @@ const I18N = {
     about: {
       heading: "About Me",
       paras: [
-        "Ningxia (Nova) Wang is a Research Assistant Professor and Postdoctoral Fellow at Lingnan University, Hong Kong, China. Her research interests span large language models and AI agents for education, human–computer interaction, recommender systems (including serendipity-oriented recommendations and bias/fairness), and media analysis.",
-        "She previously held a postdoctoral position in AI + media at Hong Kong Baptist University and worked as an algorithm researcher in computer vision. She received her PhD from Hong Kong Baptist University and her BSc from East China Normal University."
+        "Ningxia Wang (Nova) is a Research Assistant Professor at School of Data Science, Lingnan University, Hong Kong, China. Her research interests span large language models and AI agents for education, human–computer interaction, recommender systems (including serendipity-oriented recommendations and bias/fairness), and media analysis.",
+        "She previously held a postdoctoral position in AI Media Centre at Hong Kong Baptist University and worked as an algorithm researcher in computer vision. She received her PhD from Hong Kong Baptist University and her BSc from East China Normal University."
       ]
     },
     research: {
@@ -415,24 +418,24 @@ const I18N = {
     },
     projects: {
       heading: "Projects",
-      intro: "Selected research and collaborative projects.",
+      intro: "Selected research projects and grants.",
       list: [
-        { title: "[ Project title ]", org: "[ Partner / Funding source ]", period: "[ Period ]", desc: "[ Brief description of the goal and outcomes ]", tags: ["[Tag]"], link: "" }
+        { title: "LLM-Augmented News Terminal: Entity Annotations, Explanation Quality, and Interest-Aware Conversational Recommendation", org: "LU Research Committee · Co-Investigator (PI: Haoran Xie)", period: "2026.01 – 2027.12", desc: "An LLM-augmented news terminal studying entity annotations, explanation quality, and interest-aware conversational recommendation.", tags: ["LLM", "News Analysis", "Conversational Recommendation"], link: "https://scholars.ln.edu.hk/en/projects/llm-augmented-news-terminal-entity-annotations-explanation-qualit/" }
       ]
     },
     pubs: {
       heading: "Publications",
       intro: "Selected publications (APA style, reverse chronological order).",
       list: [
-        { tag: "[J1]", title: "A scoping review of generative AI-powered agentic AI in education: Research landscape, agentic capabilities, and insights from the frontier agent paradigm, exemplified by OpenClaw", meta: "Wang, N., Zou, D., Xie, H., &amp; Qin, S. J. (2026). <i>Computers and Education: Artificial Intelligence, 11</i>, 100653.", link: "https://doi.org/10.1016/j.caeai.2026.100653" },
+        { tag: "[J3]", title: "A scoping review of generative AI-powered agentic AI in education: Research landscape, agentic capabilities, and insights from the frontier agent paradigm, exemplified by OpenClaw", meta: "Wang, N., Zou, D., Xie, H., &amp; Qin, S. J. (2026). <i>Computers and Education: Artificial Intelligence, 11</i>, 100653.", link: "https://doi.org/10.1016/j.caeai.2026.100653" },
         { tag: "[J2]", title: "Bread, butter, and bias: How news coverage of egg price and tariffs polarizes U.S. democracy?", meta: "Zhong, B., Zhu, Y., Wang, N., Wang, S., Xu, J., Hu, Y., Lim, H. H., &amp; Feng, G. C. (2026). <i>American Behavioral Scientist</i>. Advance online publication.", link: "" },
-        { tag: "[J3]", title: "How do item features and user characteristics affect users' perceptions of recommendation serendipity? A cross-domain analysis", meta: "Wang, N., &amp; Chen, L. (2023). <i>User Modeling and User-Adapted Interaction, 33</i>(3), 727–765.", link: "https://doi.org/10.1007/s11257-022-09350-x" },
+        { tag: "[J1]", title: "How do item features and user characteristics affect users' perceptions of recommendation serendipity? A cross-domain analysis", meta: "Wang, N., &amp; Chen, L. (2023). <i>User Modeling and User-Adapted Interaction, 33</i>(3), 727–765.", link: "https://doi.org/10.1007/s11257-022-09350-x" },
         { tag: "[T1]", title: "Serendipity-oriented recommendations for improving user satisfaction", meta: "Wang, N. (2023). [Doctoral dissertation, Hong Kong Baptist University].", link: "" },
-        { tag: "[C1]", title: "TUR: Utilizing temporal information to make unexpected e-commerce recommendations", meta: "Ni, Y., Wang, N., Chen, L., Chen, R., &amp; Li, L. (2022). In <i>Web Information Systems Engineering – WISE 2022</i> (pp. 553–563). Springer.", link: "https://doi.org/10.1007/978-3-031-20891-1_39" },
+        { tag: "[C4]", title: "TUR: Utilizing temporal information to make unexpected e-commerce recommendations", meta: "Ni, Y., Wang, N., Chen, L., Chen, R., &amp; Li, L. (2022). In <i>Web Information Systems Engineering – WISE 2022</i> (pp. 553–563). Springer.", link: "https://doi.org/10.1007/978-3-031-20891-1_39" },
         { tag: "[P1]", title: "User validation of recommendation serendipity metrics", meta: "Chen, L., Wang, N., Yang, Y., Yang, K., &amp; Yuan, Q. (2022). <i>Preprint</i>.", link: "https://arxiv.org/abs/1906.11431" },
-        { tag: "[C2]", title: "User bias in beyond-accuracy measurement of recommendation algorithms", meta: "Wang, N., &amp; Chen, L. (2021). In <i>Proceedings of the 15th ACM Conference on Recommender Systems (RecSys '21)</i> (pp. 133–142). ACM.", link: "https://doi.org/10.1145/3460231.3474244" },
-        { tag: "[C3]", title: "The impacts of item features and user characteristics on users' perceived serendipity of recommendations", meta: "Wang, N., Chen, L., &amp; Yang, Y. (2020). In <i>Proceedings of the 28th ACM Conference on User Modeling, Adaptation and Personalization (UMAP '20)</i> (pp. 266–274). ACM.", link: "https://doi.org/10.1145/3340631.3394863" },
-        { tag: "[C4]", title: "How serendipity improves user satisfaction with recommendations? A large-scale user evaluation", meta: "Chen, L., Yang, Y., Wang, N., Yang, K., &amp; Yuan, Q. (2019). In <i>The World Wide Web Conference (WWW '19)</i> (pp. 240–250). ACM.", link: "https://doi.org/10.1145/3308558.3313469" }
+        { tag: "[C3]", title: "User bias in beyond-accuracy measurement of recommendation algorithms", meta: "Wang, N., &amp; Chen, L. (2021). In <i>Proceedings of the 15th ACM Conference on Recommender Systems (RecSys '21)</i> (pp. 133–142). ACM.", link: "https://doi.org/10.1145/3460231.3474244" },
+        { tag: "[C2]", title: "The impacts of item features and user characteristics on users' perceived serendipity of recommendations", meta: "Wang, N., Chen, L., &amp; Yang, Y. (2020). In <i>Proceedings of the 28th ACM Conference on User Modeling, Adaptation and Personalization (UMAP '20)</i> (pp. 266–274). ACM.", link: "https://doi.org/10.1145/3340631.3394863" },
+        { tag: "[C1]", title: "How serendipity improves user satisfaction with recommendations? A large-scale user evaluation", meta: "Chen, L., Yang, Y., Wang, N., Yang, K., &amp; Yuan, Q. (2019). In <i>The World Wide Web Conference (WWW '19)</i> (pp. 240–250). ACM.", link: "https://doi.org/10.1145/3308558.3313469" }
       ]
     },
     teaching: {
@@ -462,15 +465,17 @@ const I18N = {
     contact: {
       heading: "Contact",
       items: [
-        { ico: "✉", lbl: "Email", val: "you@example.com", href: "mailto:you@example.com" },
-        { ico: "⌥", lbl: "GitHub", val: "github.com/your-github-username", href: "https://github.com/your-github-username" },
-        { ico: "in", lbl: "LinkedIn", val: "linkedin.com/in/your-profile", href: "https://www.linkedin.com/in/your-profile" },
-        { ico: "◉", lbl: "Affiliation", val: "Lingnan University · Hong Kong, China", href: "" }
+        { ico: "✉", lbl: "Email", val: "novawang@ln.edu.hk", href: "mailto:novawang@ln.edu.hk" },
+        { ico: "☎", lbl: "Phone", val: "(852) 2616-7514", href: "tel:+85226167514" },
+        { ico: "G", lbl: "Google Scholar", val: "Google Scholar profile", href: "https://scholar.google.com/citations?user=dREfVmAAAAAJ" },
+        { ico: "iD", lbl: "ORCID", val: "0000-0003-1782-5554", href: "https://orcid.org/0000-0003-1782-5554" },
+        { ico: "⌥", lbl: "GitHub", val: "github.com/greenblue96", href: "https://github.com/greenblue96" },
+        { ico: "◉", lbl: "Affiliation", val: "LEO Dr David P. Chan Institute of Data Science, School of Data Science, Lingnan University, Hong Kong, China", href: "" }
       ]
     },
     footer: {
       copy: "© 2026 WANG, Ningxia (Nova). All rights reserved.",
-      built: "Minimal academic homepage · Bilingual"
+      built: "Website built with HTML + CSS + JS."
     }
   }
 };
@@ -491,7 +496,7 @@ function render(lang) {
   // nav
   const nav = $("#nav");
   nav.innerHTML = "";
-  const navOrder = ["about","research","projects","pubs","teaching","skills","education","contact"];
+  const navOrder = ["about","education","research","projects","pubs","teaching","skills","contact"];
   navOrder.forEach((k) => {
     const a = document.createElement("a");
     a.className = "nav-link";
