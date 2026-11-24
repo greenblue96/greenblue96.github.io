@@ -230,8 +230,13 @@ footer{border-top:1px solid var(--line);margin-top:20px}
     <div id="education-list"></div>
   </section>
 
+  <section id="activities">
+    <div class="section-head"><span class="idx">03</span><h2 data-i18n="activities.heading"></h2><span class="rule"></span></div>
+    <div id="activities-list"></div>
+  </section>
+
   <section id="research">
-    <div class="section-head"><span class="idx">03</span><h2 data-i18n="research.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">04</span><h2 data-i18n="research.heading"></h2><span class="rule"></span></div>
     <p class="research-intro" data-i18n="research.intro"></p>
     <div class="research-map">
       <img class="research-map-img" src="research-interests.svg" alt="研究兴趣方向：以 Human-Centred AI 为中心">
@@ -240,29 +245,29 @@ footer{border-top:1px solid var(--line);margin-top:20px}
   </section>
 
   <section id="projects">
-    <div class="section-head"><span class="idx">04</span><h2 data-i18n="projects.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">05</span><h2 data-i18n="projects.heading"></h2><span class="rule"></span></div>
     <p style="color:var(--ink-faint);font-size:14px;margin-bottom:18px" data-i18n="projects.intro"></p>
     <div id="projects-list"></div>
   </section>
 
   <section id="publications">
-    <div class="section-head"><span class="idx">05</span><h2 data-i18n="pubs.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">06</span><h2 data-i18n="pubs.heading"></h2><span class="rule"></span></div>
     <p style="color:var(--ink-faint);font-size:14px;margin-bottom:18px" data-i18n="pubs.intro"></p>
     <div id="pubs-list"></div>
   </section>
 
   <section id="teaching">
-    <div class="section-head"><span class="idx">06</span><h2 data-i18n="teaching.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">07</span><h2 data-i18n="teaching.heading"></h2><span class="rule"></span></div>
     <div id="teaching-list"></div>
   </section>
 
   <section id="skills">
-    <div class="section-head"><span class="idx">07</span><h2 data-i18n="skills.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">08</span><h2 data-i18n="skills.heading"></h2><span class="rule"></span></div>
     <div id="skills-list"></div>
   </section>
 
   <section id="contact">
-    <div class="section-head"><span class="idx">08</span><h2 data-i18n="contact.heading"></h2><span class="rule"></span></div>
+    <div class="section-head"><span class="idx">09</span><h2 data-i18n="contact.heading"></h2><span class="rule"></span></div>
     <div class="contact-grid" id="contact-list"></div>
   </section>
 </main>
@@ -293,7 +298,7 @@ const I18N = {
     },
     nav: {
       about: "关于", research: "研究", projects: "项目", pubs: "出版物",
-      teaching: "教学", skills: "技能", education: "教育", contact: "联系"
+      teaching: "教学", activities: "专业活动", skills: "技能", education: "教育", contact: "联系"
     },
     about: {
       heading: "关于我",
@@ -349,8 +354,16 @@ const I18N = {
     education: {
       heading: "教育经历",
       list: [
-        { title: "博士（PhD）", meta: "2023", org: "香港浸会大学 · 计算机科学", desc: "博士论文：Serendipity-Oriented Recommendations for Improving User Satisfaction" },
+        { title: "博士（PhD）", meta: "2023", org: "香港浸会大学 · 计算机科学", desc: "博士论文：Serendipity-Oriented Recommendations for Improving User Satisfaction；导师：<a href=\"https://www.comp.hkbu.edu.hk/~lichen/\" target=\"_blank\" rel=\"noopener\">Prof. CHEN, Li</a>" },
         { title: "学士（BSc）", meta: "2018", org: "华东师范大学", desc: "" }
+      ]
+    },
+    activities: {
+      heading: "专业活动",
+      list: [
+        { title: "Guest Editor", meta: "Electronics", org: "<a href=\"https://www.mdpi.com/journal/electronics/special_issues/57M3A52J8C\" target=\"_blank\" rel=\"noopener\">Special Issue: “Media Signal Processing and Its Applications: Audio, Language, and Intelligent Signal Processing”</a>", desc: "" },
+        { title: "Member", meta: "The Serendipity Society", org: "<a href=\"https://www.theserendipitysociety.org/\" target=\"_blank\" rel=\"noopener\">The Serendipity Society</a>", desc: "" },
+        { title: "Reviewer", meta: "Academic journals", org: "User Modeling and User-Adapted Interaction (UMUAI); Computers &amp; Education: Artificial Intelligence (CAEAI)", desc: "" }
       ]
     },
     contact: {
@@ -382,7 +395,7 @@ const I18N = {
     },
     nav: {
       about: "About", research: "Research", projects: "Projects", pubs: "Publications",
-      teaching: "Teaching", skills: "Skills", education: "Education", contact: "Contact"
+      teaching: "Teaching", activities: "Professional Activities", skills: "Skills", education: "Education", contact: "Contact"
     },
     about: {
       heading: "About Me",
@@ -438,8 +451,16 @@ const I18N = {
     education: {
       heading: "Education",
       list: [
-        { title: "PhD in Computer Science", meta: "2023", org: "Hong Kong Baptist University", desc: "Thesis: Serendipity-Oriented Recommendations for Improving User Satisfaction" },
+        { title: "PhD in Computer Science", meta: "2023", org: "Hong Kong Baptist University", desc: "Thesis: Serendipity-Oriented Recommendations for Improving User Satisfaction; Supervisor: <a href=\"https://www.comp.hkbu.edu.hk/~lichen/\" target=\"_blank\" rel=\"noopener\">Prof. CHEN, Li</a>" },
         { title: "BSc", meta: "2018", org: "East China Normal University", desc: "" }
+      ]
+    },
+    activities: {
+      heading: "Professional Activities",
+      list: [
+        { title: "Guest Editor", meta: "Electronics", org: "<a href=\"https://www.mdpi.com/journal/electronics/special_issues/57M3A52J8C\" target=\"_blank\" rel=\"noopener\">Special Issue: “Media Signal Processing and Its Applications: Audio, Language, and Intelligent Signal Processing”</a>", desc: "" },
+        { title: "Member", meta: "The Serendipity Society", org: "<a href=\"https://www.theserendipitysociety.org/\" target=\"_blank\" rel=\"noopener\">The Serendipity Society</a>", desc: "" },
+        { title: "Reviewer", meta: "Academic journals", org: "User Modeling and User-Adapted Interaction (UMUAI); Computers &amp; Education: Artificial Intelligence (CAEAI)", desc: "" }
       ]
     },
     contact: {
@@ -478,7 +499,7 @@ function render(lang) {
   // nav
   const nav = $("#nav");
   nav.innerHTML = "";
-  const navOrder = ["about","education","research","projects","pubs","teaching","skills","contact"];
+  const navOrder = ["about","education","activities","research","projects","pubs","teaching","skills","contact"];
   navOrder.forEach((k) => {
     const a = document.createElement("a");
     a.className = "nav-link";
@@ -534,6 +555,14 @@ function render(lang) {
       <div class="card-top"><h3>${e.title}</h3><span class="meta">${e.meta}</span></div>
       ${e.org ? `<div class="org">${e.org}</div>` : ""}
       ${e.desc ? `<p>${e.desc}</p>` : ""}
+    </div>`).join("");
+
+  // professional activities
+  $("#activities-list").innerHTML = t.activities.list.map((a) => `
+    <div class="card">
+      <div class="card-top"><h3>${a.title}</h3><span class="meta">${a.meta}</span></div>
+      ${a.org ? `<div class="org">${a.org}</div>` : ""}
+      ${a.desc ? `<p>${a.desc}</p>` : ""}
     </div>`).join("");
 
   // contact
